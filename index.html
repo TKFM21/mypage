@@ -107,6 +107,18 @@
                     </pre></code>
                 </li>
                 <li>js:変数とスコープの関係に注意が必要。関数内ではローカル変数が優先されるが、ローカル変数宣言前にそのローカル変数を使うとundefinedになる。これを変数の巻き上げという。<a href="https://techplay.jp/column/636">詳細</a></li>
+                <li>再帰関数での関数定義方法
+                    <p>関数に名前を付けることで自身の関数処理内で自身の関数を呼び出すことが出来る</p>
+                    <pre><code>
+                        var foo = function hoge(x){
+                            console.log(x);
+                            x--;
+                            if(x&lt;0){return;};
+                            hoge(x);
+                        };
+                        foo(5); //出力は：5 4 3 2 1 0
+                    </code></pre>
+                </li>
                 <li>js:thisの使い方：4パターン</li>
                 <ol>
                     <li>メソッド呼び出しパターン
@@ -183,6 +195,72 @@
                         </code></pre>
                     </li>
                 </ol>
+            </ol>
+        </section>
+        <section class="day">
+            <h1>2019/8/16</h1>
+            <ol>
+                <li>js:prototypeの使い方(ES2015(ES6)以前の書き方)<a href="http://js-next.hatenablog.com/entry/2014/11/01/034607">詳細</a></li>
+                <pre><code>
+                    function Cat(name){
+                        this.name = name;
+                    }
+
+                    Cat.prototype.meow = function(){
+                        alert(this.name + 'はミャオと鳴きました。');
+                    };
+                </code></pre>
+                <ul>
+                    <li>オブジェクトのメソッドを全インスタンスで共通化してメモリを節約し、管理工数も下げる目的で使う</li>
+                    <li>プロパティはコンストラクタで記載して、メソッドはprototypeで記載することを推奨</li>
+                    <li>prototypeならインスタンス作成前後でもいつでも宣言・変更が可能</li>
+                </ul>
+                <li>js:プロトタイプチェーン(ES2015以前)
+                <p>prototypeを使ってオブジェクト指向の「継承」ができる仕組みのこと</p>
+                <p>prototypeの中に別のインスタンスを入れておけば、そのインスタンスのプロパティやメソッドが利用できる</p>
+                <p>継承元のインスタンスが変われば、継承先にも反映される</p>
+                <pre><code>
+                    var Creature = function(){};
+                    Creature.prototype = {
+                        doAttack : function(){
+                            console.log(this.name + 'は' + this.attack + 'のダメージを与えた');
+                        }
+                    };
+
+                    var Monster = function(name, hp, attack, cry){
+                        this.name = name;
+                        this.hp = hp;
+                        this.attack = attack;
+                        this.doCry = function(){
+                            console.log(cry);
+                        }
+                    };
+                    Monster.prototype = new Creature();
+                    var babaa = new Monster('ばばぁ', 9999, 8000, 'ケヒャー');
+
+                    babaa.doCry();
+                    babaa.doAttack();
+                </code></pre>
+                </li>
+                <li>js：高階関数：関数を引数とする関数のこと
+                    <pre><code>
+                        function myFunc(arr, func){
+                            for(var key in arr){
+                                func(arr[key]);
+                            }
+                        }
+                        myFunc(['HTML', 'CSS', 'JS'], function(val){console.log(val);});
+                    </code></pre>
+                </li>
+                <li>js:アクティベーションオブジェクト
+                    <p>関数呼び出し時に作成される見えない変数オブジェクトがあり、その変数オブジェクトのことをアクティベーションオブジェクト（Callオブジェクト）という。</p>
+                    <p>アクティベーションオブジェクトには、引数・ローカル変数・arguments・thisが格納される</p>
+                    <p>アクティベーションオブジェクトは関数の実行時に生成され、関数宣言しただけではアクセスできない</p>
+                </li>
+                <li>js:スコープチェーン
+                    <p>jsでの変数やプロパティの参照順位の仕様（例：ローカル変数=>グローバル変数の順位）</p>
+                    <p>Callオブジェクトは関数を呼び出すたびに内部で自動生成されるオブジェクトで、関数内のローカル変数を管理している。</p>
+                </li>
             </ol>
         </section>
 </body>
