@@ -71,5 +71,119 @@
                 <li>$.ajaxを使うのが主流で、データタイプをjsonやtextなどが利用できる</li>
             </ol>
         </section>
+        <section class="day">
+            <h1>2019/8/15</h1>
+            <ol>
+                <li>SASSの調査</li>
+                <ul>
+                    <li>記法は2種類：SASS記法（Ruby風）とSCSS記法（CSS風）</li>
+                    <li>=>SCSSを採用しよう。</li>
+                    <li>コンパイラは3種類：Codepen、Koala、glup-sass+Glup.js</li>
+                    <li>=>glup-sass+Glup.jsを採用</li>
+                    <li><a href="https://media-massage.net/works/docs/easysass/">詳細はこれ</a></li>
+                </ul>
+                <li>javascriptオブジェクトとjQueryオブジェクトが存在し、扱い方に注意が必要。<a href="https://blog.webcreativepark.net/2012/12/22-135621.html">詳細</a></li>
+                <li>jQueryのメソッドチェーン例：$(".hoge").css("color","red").attr("title","hoge");</li>
+                <ul>
+                    <li>jQueryの多くのメソッドはjQueryオブジェクトを返すため、この記述ができる</li>
+                </ul>
+                <li>jQueryのオブジェクトを返さないメソッド例：$(".hoge").css("color").attr("title","hoge");</li>
+                <ul>
+                    <li>これはエラーになる。「.css("color")」は、最初のjQueryオブジェクトのcolorプロパティの値を返すため</li>
+                </ul>
+                <li>javascript+jQuery+PHP+mySQLで入力値の重複チェックAjax通信の作成</li>
+                <li>javascriptで入力イベントによってボタンの有効化と無効化機能の作成</li>
+                <li>javascriptでモーダルの表示・非表示機能の作成</li>
+                <li><a href="https://qiita.com/tsukishimaao/items/39d22fd9178546d6cdeb">jsのwindowオブジェクトの解説</a></li>
+                <li>js関数のエラーチェックとエラーハンドリングを実施
+                    <code><pre>
+                        function myFunc(val1, val2){
+                            if(arguments.length != 2){
+                                throw new Error('引数が不正です。');
+                            }
+                            console.log(val1 + val2);
+                        }
+                        myFunc(69); //エラー表示される
+                    </pre></code>
+                </li>
+                <li>js:変数とスコープの関係に注意が必要。関数内ではローカル変数が優先されるが、ローカル変数宣言前にそのローカル変数を使うとundefinedになる。これを変数の巻き上げという。<a href="https://techplay.jp/column/636">詳細</a></li>
+                <li>js:thisの使い方：4パターン</li>
+                <ol>
+                    <li>メソッド呼び出しパターン
+                        <p>オブジェクトのメソッドを呼び出した場合、thisはそのオブジェクトが対象となる</p>
+                        <pre><code>
+                            var myObject = {
+                                val: 10;
+                                show: function(){
+                                    console.log(this.val);
+                                    console.log(this);
+                                }
+                            }
+                            myObject.show(); //10が出力される
+                        </code></pre>
+                    </li>
+                    <li>関数呼び出しパターン
+                        <p>ここでのthisはwindowオブジェクトが対象</p>
+                        <pre><code>
+                            function show(){
+                                console.log(this);
+                                this.val = 1;
+                            }
+                            show(); //window.show()オブジェクトが出力される
+                        </code></pre>
+                        <p>オブジェクトのメソッドで関数を作成した場合もwindowオブジェクトが対象となる</p>
+                        <pre><code>
+                            var myObject = {
+                                val: 1;
+                                show: function(){
+                                    console.log(this.val); //1
+                                    console.log(this); //myObjectが対象
+
+                                    function myFunc(){
+                                        console.log(this.val); //undefined
+                                        console.log(this); //windowオブジェクトが対象のため
+                                    }
+                                    myFunc();
+                                }
+                            };
+                            myObject.show();
+                        </code></pre>
+                    </li>
+                    <li>コンストラクタ呼び出しパターン
+                        <p>オブジェクトインスタンスが対象</p>
+                        <pre><code>
+                            function MyObject(val){
+                                this.myVal = val;
+                                this.myFunc = function(){
+                                    this.myVal++;
+                                };
+                            }
+                            var myObject = new MyObject(1); //ここで作成されるインスタンスがthisの対象
+                            console.log(myObject.myVal); //出力は1
+                            myObject.myFunc();
+                            console.log(myObject.myVal); //出力は2
+                        </code></pre>
+                    </li>
+                    <li>apply,call呼び出しパターン
+                        <p>thisの対象を切り替えることができる</p>
+                        <pre><code>
+                            var myObject = {
+                                val: 1;
+                                show: function(){
+                                    console.log(this.val);
+                                }
+                            };
+                            var yourObject = {
+                                val: 3;
+                            };
+
+                            myObject.show(); //1
+                            myObject.show.apply(yourObject); //3
+                            myObject.show.call(yourObject); //3
+                        </code></pre>
+                    </li>
+                </ol>
+            </ol>
+        </section>
 </body>
 </html>
