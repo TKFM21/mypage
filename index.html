@@ -263,5 +263,68 @@
                 </li>
             </ol>
         </section>
+        <section class="day">
+            <h1>2019/8/16</h1>
+            <ol>
+                <li>js:クロージャ
+                    <p>PHPなどとは異なる仕様</p>
+                    <p>「自分を囲むスコープにある変数を参照できる関数」がクロージャ</p>
+                    <p>関数の実行が完了されればCallオブジェクトは破棄されるが、さらに内側などでローカル変数が利用されていれば保持される</p>
+                    <pre><code>
+                        //開発ツールのコンソールへ直接コーディングしても動作を確認できないため、実ファイルで確認した
+                        function outerFunc(){
+                            var value = 1;
+
+                            //outerFunc Callオブジェクト ={
+                            //  arguments : ....
+                            //  this : ....
+                            //  value : 1
+                            //}
+                            
+                            function innerFunc(){
+                                //innerFunc Callオブジェクト = {
+                                //  arguments : ....
+                                //  this : ....
+                                //}
+                                console.log(++value);
+                            }
+                            return innerFunc;
+                        }
+                        var fn1 = outerFunc(); //innerFuncという関数オブジェクトが変数に格納されている
+                        fn1(); //出力は2
+                        fn1(); //出力は3
+                        //innerFuncのCallオブジェクトはouterFuncのCallオブジェクトのローカル変数を参照しているので破棄されず残ったままになる
+                    </code></pre>
+                </li>
+                <li>クロージャを使ってプライベート変数が作成できる！
+                    <pre><code>
+                        //開発ツール上では動作を確認できないため、ファイルで確認した
+                        &lt;script type="text/javascript"&gt;
+                            var Module = function(){
+                                var count = 0;
+                                return {
+                                    increment: function(){
+                                        alert(count++);
+                                    }
+                                };
+                            };
+                            var md1 = new Module();
+                            alert(md1.count); //undefined
+                            md1.increment(); //0
+                            md1.increment(); //1
+                            alert(md1.count); //undefined
+                        &lt;/script&gt;
+                    </code></pre>
+                </li>
+                <li>クロージャの使い所</li>
+                <ul>
+                    <li>グローバル変数の宣言をなるべく減らしたいとき</li>
+                    <li>ユーザーが引数を与えてカスタマイズ可能な自由度の高い「関数」を生成したいとき</li>
+                    <li>前回、呼び出されて実行されたときの演算結果（値）を内部で保持して、次に呼び出されたときに、前回の結果（値）に対して、更に同じ処理を行う関数を生成したいとき</li>
+                </ul>
+                <li>クロージャ課題：ボタンカウンター</li>
+            </ol>
+        </section>
+        
 </body>
 </html>
