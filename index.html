@@ -322,9 +322,36 @@
                     <li>ユーザーが引数を与えてカスタマイズ可能な自由度の高い「関数」を生成したいとき</li>
                     <li>前回、呼び出されて実行されたときの演算結果（値）を内部で保持して、次に呼び出されたときに、前回の結果（値）に対して、更に同じ処理を行う関数を生成したいとき</li>
                 </ul>
-                <li>クロージャ課題：ボタンカウンター</li>
+                <li>クロージャ課題：ボタンカウンター：[js_button_counter]で作成</li>
             </ol>
         </section>
-        
+        <section class="day">
+            <h1>2019/8/1７</h1>
+            <ol>
+                <li>macOSターミナルの学習</li>
+                <ul>
+                    <li>UNIX、Linuxとの関連性</li>
+                    <li>rootlessモードや権限について</li>
+                    <li>シェル、カーネルの関連性</li>
+                    <li>macOSのファイルシステムとパスの記法</li>
+                    <li>各種コマンドの使い方。パイプでの組み合わせ方</li>
+                    <li>nano,vimの概要</li>
+                    <li>macOSでのvimのシンボリックリンクの確認コマンド
+                        <pre><code>ls -l /usr/bin/vi</code></pre>
+                    </li>
+                    <li>vimの日本語ファイルのための設定
+                        <p>日本語の文字エンコーディングと改行コードの自動認識の設定<br>
+                            vimの設定ファイル「~/.vimrc」に下記を追記すると読み込むファイルの文字エンコーディング、改行コードを自動認識する。<br>
+                            vimrcファイルは初期状態では存在しないため作成する必要あり、下記以外にも様々な設定によって使い勝手が向上する。
+                        </p>
+                        <pre><code>
+                            set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+                            set fileformats=unix,dos,mac
+                        </code></pre>
+                    </li>
+                    <li>vimのチュートリアルコマンド：「vimtutor」</li>
+                </ul>
+            </ol>
+        </section>
 </body>
 </html>
