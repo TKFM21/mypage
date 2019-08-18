@@ -362,6 +362,27 @@
                         <li>自動スライド化</li>
                         <li>5の状態でNextを押されたら1へ移行（逆も必要）</li>
                     </ul>
+                    <li>Webシステムにはデータ保存方法が4パターン存在する。</li>
+                    <ol>
+                        <li>cookie（ユーザーが改変できる。ブラウザは跨げない。）</li>
+                        <li>session（ユーザーは改変できない。ブラウザは跨げない。）</li>
+                        <li>localStorage（ユーザーは改変できない。ブラウザは跨げない。）</li>
+                        <li>DB（ユーザーは改変できない。ブラウザはまたげる。）</li>
+                    </ol>
+                    <li>javascriptでcookieを編集：cookieの概要</li>
+                    <ul>
+                        <li>データをそのままブラウザに保存しておける機能</li>
+                        <li>ブラウザごとに保存されるので、別のブラウザで同じcookieの中身は見られない。（データ共有不能）</li>
+                        <li>ブラウザに保存されているため、ユーザーが改変できる。</li>
+                        <li>そのため個人情報は保存してはいけない</li>
+                        <li>ブラウザで保存できるcookieの個数とバイト数はブラウザによって微妙に異なる</li>
+                        <li>IEでは、1ドメインにつき50個のcookieが保存でき、1個のcookieは4096バイトまで</li>
+                        <li>cookieの名前や値には[;][,]空白を含めてはいけない（encodeURIComponent()を使用して排除）</li>
+                        <li>cookieの中にはkey、valueの形式でデータが保存されている</li>
+                        <li>chromeにはcookie管理用に拡張機能EditThisCookieを追加すること</li>
+                        <li>jquery-cookie-masterを使うことでコーディングが短縮できる</li>
+                        <li>サンプルコードは「js_cookie」へ</li>
+                    </ul>
                 </ol>
             </section>
 </body>
