@@ -395,6 +395,18 @@
             <li>RHEL7.3をiSCSIイニシエーター設定し、QNAPをiSCSIで接続し、パーティション作成、ファイルシステム作成、マウント</li>
             <li>マウントした領域へRED5をインストール</li>
             <li>RED5のデモで動作確認するも正常動作せず、調査にハマる</li>
+            <li>homebrewをインストールして、node.js, npmのインストール</li>
+            <li>開発ディレクトリへ移動して<code>npm init</code>を実行してpackage.jsonを作成（対話形式はすべてEnterでOK）</li>
+            <li>browserify, jquery, gulp, gruntをインストール</li>
+            <li><code>npm install -g browserify</code>とするとPC全体で利用できるように/usr/local/lib/node_modules/にインストールされる（今回は-gなし）</li>
+            <li><code>npm install gulp -D</code>とするとpackage.jsonのdevDependencies欄に記載される</li>
+            <li><code>npm install grunt@0.3.17 -D</code>とするとバージョン指定でインストールが可能</li>
+            <li>browserifyでできること</li>
+            <ul>
+                <li>複数のjsファイルを結合してくれる</li>
+                <li>モジュール間の依存関係を解決したり、ビルドできる。</li>
+                <li>requireを使って別ファイルのjsを読み込めるので、htmlのscriptタグは一つでOK。読み込み順序の考慮は不要</li>
+            </ul>
         </ol>
     </section>
 </body>
