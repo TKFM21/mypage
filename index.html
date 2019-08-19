@@ -52,338 +52,350 @@
         </ol>
     </section>
     <section class="day">
-            <h1>2019/8/13</h1>
-            <ol>
-                <li>Wordpressテーマ作成研修完了</li>
-                <li>最後に</li>
-                <li>作ったメニューや投稿記事、画像など設定情報はエクスポート機能を使ってファイルに出力</li>
-                <li>そのファイルをテンプレート購入者がインポートすることで初期設定を最小限にできる</li>
-                <li>HPの上部に余白が出来る場合、管理画面から解除できる。（管理者用操作盤を表示するために出来てしまう空間）</li>
-                <li>テンプレート購入者が管理画面からテンプレートをインストールするためにはテンプレートはzip形式に圧縮する必要あり</li>
-                <li>まとめ画像は別ファイルへ保存</li>
-            </ol>
-        </section>
-        <section class="day">
-            <h1>2019/8/14</h1>
-            <ol>
-                <li>javascriptでAjaxの練習</li>
-                <li>jQueryを使ったAjax練習</li>
-                <li>$.ajaxを使うのが主流で、データタイプをjsonやtextなどが利用できる</li>
-            </ol>
-        </section>
-        <section class="day">
-            <h1>2019/8/15</h1>
-            <ol>
-                <li>SASSの調査</li>
-                <ul>
-                    <li>記法は2種類：SASS記法（Ruby風）とSCSS記法（CSS風）</li>
-                    <li>=>SCSSを採用しよう。</li>
-                    <li>コンパイラは3種類：Codepen、Koala、glup-sass+Glup.js</li>
-                    <li>=>glup-sass+Glup.jsを採用</li>
-                    <li><a href="https://media-massage.net/works/docs/easysass/">詳細はこれ</a></li>
-                </ul>
-                <li>javascriptオブジェクトとjQueryオブジェクトが存在し、扱い方に注意が必要。<a href="https://blog.webcreativepark.net/2012/12/22-135621.html">詳細</a></li>
-                <li>jQueryのメソッドチェーン例：$(".hoge").css("color","red").attr("title","hoge");</li>
-                <ul>
-                    <li>jQueryの多くのメソッドはjQueryオブジェクトを返すため、この記述ができる</li>
-                </ul>
-                <li>jQueryのオブジェクトを返さないメソッド例：$(".hoge").css("color").attr("title","hoge");</li>
-                <ul>
-                    <li>これはエラーになる。「.css("color")」は、最初のjQueryオブジェクトのcolorプロパティの値を返すため</li>
-                </ul>
-                <li>javascript+jQuery+PHP+mySQLで入力値の重複チェックAjax通信の作成</li>
-                <li>javascriptで入力イベントによってボタンの有効化と無効化機能の作成</li>
-                <li>javascriptでモーダルの表示・非表示機能の作成</li>
-                <li><a href="https://qiita.com/tsukishimaao/items/39d22fd9178546d6cdeb">jsのwindowオブジェクトの解説</a></li>
-                <li>js関数のエラーチェックとエラーハンドリングを実施
-                    <code><pre>
-                        function myFunc(val1, val2){
-                            if(arguments.length != 2){
-                                throw new Error('引数が不正です。');
-                            }
-                            console.log(val1 + val2);
+        <h1>2019/8/13</h1>
+        <ol>
+            <li>Wordpressテーマ作成研修完了</li>
+            <li>最後に</li>
+            <li>作ったメニューや投稿記事、画像など設定情報はエクスポート機能を使ってファイルに出力</li>
+            <li>そのファイルをテンプレート購入者がインポートすることで初期設定を最小限にできる</li>
+            <li>HPの上部に余白が出来る場合、管理画面から解除できる。（管理者用操作盤を表示するために出来てしまう空間）</li>
+            <li>テンプレート購入者が管理画面からテンプレートをインストールするためにはテンプレートはzip形式に圧縮する必要あり</li>
+            <li>まとめ画像は別ファイルへ保存</li>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/14</h1>
+        <ol>
+            <li>javascriptでAjaxの練習</li>
+            <li>jQueryを使ったAjax練習</li>
+            <li>$.ajaxを使うのが主流で、データタイプをjsonやtextなどが利用できる</li>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/15</h1>
+        <ol>
+            <li>SASSの調査</li>
+            <ul>
+                <li>記法は2種類：SASS記法（Ruby風）とSCSS記法（CSS風）</li>
+                <li>=>SCSSを採用しよう。</li>
+                <li>コンパイラは3種類：Codepen、Koala、glup-sass+Glup.js</li>
+                <li>=>glup-sass+Glup.jsを採用</li>
+                <li><a href="https://media-massage.net/works/docs/easysass/">詳細はこれ</a></li>
+            </ul>
+            <li>javascriptオブジェクトとjQueryオブジェクトが存在し、扱い方に注意が必要。<a href="https://blog.webcreativepark.net/2012/12/22-135621.html">詳細</a></li>
+            <li>jQueryのメソッドチェーン例：$(".hoge").css("color","red").attr("title","hoge");</li>
+            <ul>
+                <li>jQueryの多くのメソッドはjQueryオブジェクトを返すため、この記述ができる</li>
+            </ul>
+            <li>jQueryのオブジェクトを返さないメソッド例：$(".hoge").css("color").attr("title","hoge");</li>
+            <ul>
+                <li>これはエラーになる。「.css("color")」は、最初のjQueryオブジェクトのcolorプロパティの値を返すため</li>
+            </ul>
+            <li>javascript+jQuery+PHP+mySQLで入力値の重複チェックAjax通信の作成</li>
+            <li>javascriptで入力イベントによってボタンの有効化と無効化機能の作成</li>
+            <li>javascriptでモーダルの表示・非表示機能の作成</li>
+            <li><a href="https://qiita.com/tsukishimaao/items/39d22fd9178546d6cdeb">jsのwindowオブジェクトの解説</a></li>
+            <li>js関数のエラーチェックとエラーハンドリングを実施
+                <code><pre>
+                    function myFunc(val1, val2){
+                        if(arguments.length != 2){
+                            throw new Error('引数が不正です。');
                         }
-                        myFunc(69); //エラー表示される
-                    </pre></code>
-                </li>
-                <li>js:変数とスコープの関係に注意が必要。関数内ではローカル変数が優先されるが、ローカル変数宣言前にそのローカル変数を使うとundefinedになる。これを変数の巻き上げという。<a href="https://techplay.jp/column/636">詳細</a></li>
-                <li>再帰関数での関数定義方法
-                    <p>関数に名前を付けることで自身の関数処理内で自身の関数を呼び出すことが出来る</p>
-                    <pre><code>
-                        var foo = function hoge(x){
-                            console.log(x);
-                            x--;
-                            if(x&lt;0){return;};
-                            hoge(x);
-                        };
-                        foo(5); //出力は：5 4 3 2 1 0
-                    </code></pre>
-                </li>
-                <li>js:thisの使い方：4パターン</li>
-                <ol>
-                    <li>メソッド呼び出しパターン
-                        <p>オブジェクトのメソッドを呼び出した場合、thisはそのオブジェクトが対象となる</p>
-                        <pre><code>
-                            var myObject = {
-                                val: 10;
-                                show: function(){
-                                    console.log(this.val);
-                                    console.log(this);
-                                }
-                            }
-                            myObject.show(); //10が出力される
-                        </code></pre>
-                    </li>
-                    <li>関数呼び出しパターン
-                        <p>ここでのthisはwindowオブジェクトが対象</p>
-                        <pre><code>
-                            function show(){
-                                console.log(this);
-                                this.val = 1;
-                            }
-                            show(); //window.show()オブジェクトが出力される
-                        </code></pre>
-                        <p>オブジェクトのメソッドで関数を作成した場合もwindowオブジェクトが対象となる</p>
-                        <pre><code>
-                            var myObject = {
-                                val: 1;
-                                show: function(){
-                                    console.log(this.val); //1
-                                    console.log(this); //myObjectが対象
-
-                                    function myFunc(){
-                                        console.log(this.val); //undefined
-                                        console.log(this); //windowオブジェクトが対象のため
-                                    }
-                                    myFunc();
-                                }
-                            };
-                            myObject.show();
-                        </code></pre>
-                    </li>
-                    <li>コンストラクタ呼び出しパターン
-                        <p>オブジェクトインスタンスが対象</p>
-                        <pre><code>
-                            function MyObject(val){
-                                this.myVal = val;
-                                this.myFunc = function(){
-                                    this.myVal++;
-                                };
-                            }
-                            var myObject = new MyObject(1); //ここで作成されるインスタンスがthisの対象
-                            console.log(myObject.myVal); //出力は1
-                            myObject.myFunc();
-                            console.log(myObject.myVal); //出力は2
-                        </code></pre>
-                    </li>
-                    <li>apply,call呼び出しパターン
-                        <p>thisの対象を切り替えることができる</p>
-                        <pre><code>
-                            var myObject = {
-                                val: 1;
-                                show: function(){
-                                    console.log(this.val);
-                                }
-                            };
-                            var yourObject = {
-                                val: 3;
-                            };
-
-                            myObject.show(); //1
-                            myObject.show.apply(yourObject); //3
-                            myObject.show.call(yourObject); //3
-                        </code></pre>
-                    </li>
-                </ol>
-            </ol>
-        </section>
-        <section class="day">
-            <h1>2019/8/16</h1>
-            <ol>
-                <li>js:prototypeの使い方(ES2015(ES6)以前の書き方)<a href="http://js-next.hatenablog.com/entry/2014/11/01/034607">詳細</a></li>
-                <pre><code>
-                    function Cat(name){
-                        this.name = name;
+                        console.log(val1 + val2);
                     }
-
-                    Cat.prototype.meow = function(){
-                        alert(this.name + 'はミャオと鳴きました。');
-                    };
-                </code></pre>
-                <ul>
-                    <li>オブジェクトのメソッドを全インスタンスで共通化してメモリを節約し、管理工数も下げる目的で使う</li>
-                    <li>プロパティはコンストラクタで記載して、メソッドはprototypeで記載することを推奨</li>
-                    <li>prototypeならインスタンス作成前後でもいつでも宣言・変更が可能</li>
-                </ul>
-                <li>js:プロトタイプチェーン(ES2015以前)
-                <p>prototypeを使ってオブジェクト指向の「継承」ができる仕組みのこと</p>
-                <p>prototypeの中に別のインスタンスを入れておけば、そのインスタンスのプロパティやメソッドが利用できる</p>
-                <p>継承元のインスタンスが変われば、継承先にも反映される</p>
+                    myFunc(69); //エラー表示される
+                </pre></code>
+            </li>
+            <li>js:変数とスコープの関係に注意が必要。関数内ではローカル変数が優先されるが、ローカル変数宣言前にそのローカル変数を使うとundefinedになる。これを変数の巻き上げという。<a href="https://techplay.jp/column/636">詳細</a></li>
+            <li>再帰関数での関数定義方法
+                <p>関数に名前を付けることで自身の関数処理内で自身の関数を呼び出すことが出来る</p>
                 <pre><code>
-                    var Creature = function(){};
-                    Creature.prototype = {
-                        doAttack : function(){
-                            console.log(this.name + 'は' + this.attack + 'のダメージを与えた');
-                        }
+                    var foo = function hoge(x){
+                        console.log(x);
+                        x--;
+                        if(x&lt;0){return;};
+                        hoge(x);
                     };
-
-                    var Monster = function(name, hp, attack, cry){
-                        this.name = name;
-                        this.hp = hp;
-                        this.attack = attack;
-                        this.doCry = function(){
-                            console.log(cry);
-                        }
-                    };
-                    Monster.prototype = new Creature();
-                    var babaa = new Monster('ばばぁ', 9999, 8000, 'ケヒャー');
-
-                    babaa.doCry();
-                    babaa.doAttack();
+                    foo(5); //出力は：5 4 3 2 1 0
                 </code></pre>
-                </li>
-                <li>js：高階関数：関数を引数とする関数のこと
+            </li>
+            <li>js:thisの使い方：4パターン</li>
+            <ol>
+                <li>メソッド呼び出しパターン
+                    <p>オブジェクトのメソッドを呼び出した場合、thisはそのオブジェクトが対象となる</p>
                     <pre><code>
-                        function myFunc(arr, func){
-                            for(var key in arr){
-                                func(arr[key]);
+                        var myObject = {
+                            val: 10;
+                            show: function(){
+                                console.log(this.val);
+                                console.log(this);
                             }
                         }
-                        myFunc(['HTML', 'CSS', 'JS'], function(val){console.log(val);});
+                        myObject.show(); //10が出力される
                     </code></pre>
                 </li>
-                <li>js:アクティベーションオブジェクト
-                    <p>関数呼び出し時に作成される見えない変数オブジェクトがあり、その変数オブジェクトのことをアクティベーションオブジェクト（Callオブジェクト）という。</p>
-                    <p>アクティベーションオブジェクトには、引数・ローカル変数・arguments・thisが格納される</p>
-                    <p>アクティベーションオブジェクトは関数の実行時に生成され、関数宣言しただけではアクセスできない</p>
+                <li>関数呼び出しパターン
+                    <p>ここでのthisはwindowオブジェクトが対象</p>
+                    <pre><code>
+                        function show(){
+                            console.log(this);
+                            this.val = 1;
+                        }
+                        show(); //window.show()オブジェクトが出力される
+                    </code></pre>
+                    <p>オブジェクトのメソッドで関数を作成した場合もwindowオブジェクトが対象となる</p>
+                    <pre><code>
+                        var myObject = {
+                            val: 1;
+                            show: function(){
+                                console.log(this.val); //1
+                                console.log(this); //myObjectが対象
+
+                                function myFunc(){
+                                    console.log(this.val); //undefined
+                                    console.log(this); //windowオブジェクトが対象のため
+                                }
+                                myFunc();
+                            }
+                        };
+                        myObject.show();
+                    </code></pre>
                 </li>
-                <li>js:スコープチェーン
-                    <p>jsでの変数やプロパティの参照順位の仕様（例：ローカル変数=>グローバル変数の順位）</p>
-                    <p>Callオブジェクトは関数を呼び出すたびに内部で自動生成されるオブジェクトで、関数内のローカル変数を管理している。</p>
+                <li>コンストラクタ呼び出しパターン
+                    <p>オブジェクトインスタンスが対象</p>
+                    <pre><code>
+                        function MyObject(val){
+                            this.myVal = val;
+                            this.myFunc = function(){
+                                this.myVal++;
+                            };
+                        }
+                        var myObject = new MyObject(1); //ここで作成されるインスタンスがthisの対象
+                        console.log(myObject.myVal); //出力は1
+                        myObject.myFunc();
+                        console.log(myObject.myVal); //出力は2
+                    </code></pre>
+                </li>
+                <li>apply,call呼び出しパターン
+                    <p>thisの対象を切り替えることができる</p>
+                    <pre><code>
+                        var myObject = {
+                            val: 1;
+                            show: function(){
+                                console.log(this.val);
+                            }
+                        };
+                        var yourObject = {
+                            val: 3;
+                        };
+
+                        myObject.show(); //1
+                        myObject.show.apply(yourObject); //3
+                        myObject.show.call(yourObject); //3
+                    </code></pre>
                 </li>
             </ol>
-        </section>
-        <section class="day">
-            <h1>2019/8/16</h1>
-            <ol>
-                <li>js:クロージャ
-                    <p>PHPなどとは異なる仕様</p>
-                    <p>「自分を囲むスコープにある変数を参照できる関数」がクロージャ</p>
-                    <p>関数の実行が完了されればCallオブジェクトは破棄されるが、さらに内側などでローカル変数が利用されていれば保持される</p>
-                    <pre><code>
-                        //開発ツールのコンソールへ直接コーディングしても動作を確認できないため、実ファイルで確認した
-                        function outerFunc(){
-                            var value = 1;
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/16</h1>
+        <ol>
+            <li>js:prototypeの使い方(ES2015(ES6)以前の書き方)<a href="http://js-next.hatenablog.com/entry/2014/11/01/034607">詳細</a></li>
+            <pre><code>
+                function Cat(name){
+                    this.name = name;
+                }
 
-                            //outerFunc Callオブジェクト ={
+                Cat.prototype.meow = function(){
+                    alert(this.name + 'はミャオと鳴きました。');
+                };
+            </code></pre>
+            <ul>
+                <li>オブジェクトのメソッドを全インスタンスで共通化してメモリを節約し、管理工数も下げる目的で使う</li>
+                <li>プロパティはコンストラクタで記載して、メソッドはprototypeで記載することを推奨</li>
+                <li>prototypeならインスタンス作成前後でもいつでも宣言・変更が可能</li>
+            </ul>
+            <li>js:プロトタイプチェーン(ES2015以前)
+            <p>prototypeを使ってオブジェクト指向の「継承」ができる仕組みのこと</p>
+            <p>prototypeの中に別のインスタンスを入れておけば、そのインスタンスのプロパティやメソッドが利用できる</p>
+            <p>継承元のインスタンスが変われば、継承先にも反映される</p>
+            <pre><code>
+                var Creature = function(){};
+                Creature.prototype = {
+                    doAttack : function(){
+                        console.log(this.name + 'は' + this.attack + 'のダメージを与えた');
+                    }
+                };
+
+                var Monster = function(name, hp, attack, cry){
+                    this.name = name;
+                    this.hp = hp;
+                    this.attack = attack;
+                    this.doCry = function(){
+                        console.log(cry);
+                    }
+                };
+                Monster.prototype = new Creature();
+                var babaa = new Monster('ばばぁ', 9999, 8000, 'ケヒャー');
+
+                babaa.doCry();
+                babaa.doAttack();
+            </code></pre>
+            </li>
+            <li>js：高階関数：関数を引数とする関数のこと
+                <pre><code>
+                    function myFunc(arr, func){
+                        for(var key in arr){
+                            func(arr[key]);
+                        }
+                    }
+                    myFunc(['HTML', 'CSS', 'JS'], function(val){console.log(val);});
+                </code></pre>
+            </li>
+            <li>js:アクティベーションオブジェクト
+                <p>関数呼び出し時に作成される見えない変数オブジェクトがあり、その変数オブジェクトのことをアクティベーションオブジェクト（Callオブジェクト）という。</p>
+                <p>アクティベーションオブジェクトには、引数・ローカル変数・arguments・thisが格納される</p>
+                <p>アクティベーションオブジェクトは関数の実行時に生成され、関数宣言しただけではアクセスできない</p>
+            </li>
+            <li>js:スコープチェーン
+                <p>jsでの変数やプロパティの参照順位の仕様（例：ローカル変数=>グローバル変数の順位）</p>
+                <p>Callオブジェクトは関数を呼び出すたびに内部で自動生成されるオブジェクトで、関数内のローカル変数を管理している。</p>
+            </li>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/16</h1>
+        <ol>
+            <li>js:クロージャ
+                <p>PHPなどとは異なる仕様</p>
+                <p>「自分を囲むスコープにある変数を参照できる関数」がクロージャ</p>
+                <p>関数の実行が完了されればCallオブジェクトは破棄されるが、さらに内側などでローカル変数が利用されていれば保持される</p>
+                <pre><code>
+                    //開発ツールのコンソールへ直接コーディングしても動作を確認できないため、実ファイルで確認した
+                    function outerFunc(){
+                        var value = 1;
+
+                        //outerFunc Callオブジェクト ={
+                        //  arguments : ....
+                        //  this : ....
+                        //  value : 1
+                        //}
+                        
+                        function innerFunc(){
+                            //innerFunc Callオブジェクト = {
                             //  arguments : ....
                             //  this : ....
-                            //  value : 1
                             //}
-                            
-                            function innerFunc(){
-                                //innerFunc Callオブジェクト = {
-                                //  arguments : ....
-                                //  this : ....
-                                //}
-                                console.log(++value);
-                            }
-                            return innerFunc;
+                            console.log(++value);
                         }
-                        var fn1 = outerFunc(); //innerFuncという関数オブジェクトが変数に格納されている
-                        fn1(); //出力は2
-                        fn1(); //出力は3
-                        //innerFuncのCallオブジェクトはouterFuncのCallオブジェクトのローカル変数を参照しているので破棄されず残ったままになる
-                    </code></pre>
-                </li>
-                <li>クロージャを使ってプライベート変数が作成できる！
-                    <pre><code>
-                        //開発ツール上では動作を確認できないため、ファイルで確認した
-                        &lt;script type="text/javascript"&gt;
-                            var Module = function(){
-                                var count = 0;
-                                return {
-                                    increment: function(){
-                                        alert(count++);
-                                    }
-                                };
+                        return innerFunc;
+                    }
+                    var fn1 = outerFunc(); //innerFuncという関数オブジェクトが変数に格納されている
+                    fn1(); //出力は2
+                    fn1(); //出力は3
+                    //innerFuncのCallオブジェクトはouterFuncのCallオブジェクトのローカル変数を参照しているので破棄されず残ったままになる
+                </code></pre>
+            </li>
+            <li>クロージャを使ってプライベート変数が作成できる！
+                <pre><code>
+                    //開発ツール上では動作を確認できないため、ファイルで確認した
+                    &lt;script type="text/javascript"&gt;
+                        var Module = function(){
+                            var count = 0;
+                            return {
+                                increment: function(){
+                                    alert(count++);
+                                }
                             };
-                            var md1 = new Module();
-                            alert(md1.count); //undefined
-                            md1.increment(); //0
-                            md1.increment(); //1
-                            alert(md1.count); //undefined
-                        &lt;/script&gt;
+                        };
+                        var md1 = new Module();
+                        alert(md1.count); //undefined
+                        md1.increment(); //0
+                        md1.increment(); //1
+                        alert(md1.count); //undefined
+                    &lt;/script&gt;
+                </code></pre>
+            </li>
+            <li>クロージャの使い所</li>
+            <ul>
+                <li>グローバル変数の宣言をなるべく減らしたいとき</li>
+                <li>ユーザーが引数を与えてカスタマイズ可能な自由度の高い「関数」を生成したいとき</li>
+                <li>前回、呼び出されて実行されたときの演算結果（値）を内部で保持して、次に呼び出されたときに、前回の結果（値）に対して、更に同じ処理を行う関数を生成したいとき</li>
+            </ul>
+            <li>クロージャ課題：ボタンカウンター：[js_button_counter]で作成</li>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/1７</h1>
+        <ol>
+            <li>macOSターミナルの学習</li>
+            <ul>
+                <li>UNIX、Linuxとの関連性</li>
+                <li>rootlessモードや権限について</li>
+                <li>シェル、カーネルの関連性</li>
+                <li>macOSのファイルシステムとパスの記法</li>
+                <li>各種コマンドの使い方。パイプでの組み合わせ方</li>
+                <li>nano,vimの概要</li>
+                <li>macOSでのvimのシンボリックリンクの確認コマンド
+                    <pre><code>ls -l /usr/bin/vi</code></pre>
+                </li>
+                <li>vimの日本語ファイルのための設定
+                    <p>日本語の文字エンコーディングと改行コードの自動認識の設定<br>
+                        vimの設定ファイル「~/.vimrc」に下記を追記すると読み込むファイルの文字エンコーディング、改行コードを自動認識する。<br>
+                        vimrcファイルは初期状態では存在しないため作成する必要あり、下記以外にも様々な設定によって使い勝手が向上する。
+                    </p>
+                    <pre><code>
+                        set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+                        set fileformats=unix,dos,mac
                     </code></pre>
                 </li>
-                <li>クロージャの使い所</li>
-                <ul>
-                    <li>グローバル変数の宣言をなるべく減らしたいとき</li>
-                    <li>ユーザーが引数を与えてカスタマイズ可能な自由度の高い「関数」を生成したいとき</li>
-                    <li>前回、呼び出されて実行されたときの演算結果（値）を内部で保持して、次に呼び出されたときに、前回の結果（値）に対して、更に同じ処理を行う関数を生成したいとき</li>
-                </ul>
-                <li>クロージャ課題：ボタンカウンター：[js_button_counter]で作成</li>
-            </ol>
-        </section>
-        <section class="day">
-            <h1>2019/8/1７</h1>
+                <li>vimのチュートリアルコマンド：「vimtutor」</li>
+            </ul>
+            <li>js:ドロップダウンメニューの作成</li>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/18</h1>
+        <ol>
+            <li>js:画像スライダーの作成[js_imgslide]ディレクトリ。課題は下記</li>
+            <ul>
+                <li>自動スライド化</li>
+                <li>5の状態でNextを押されたら1へ移行（逆も必要）</li>
+            </ul>
+            <li>Webシステムにはデータ保存方法が4パターン存在する。</li>
             <ol>
-                <li>macOSターミナルの学習</li>
-                <ul>
-                    <li>UNIX、Linuxとの関連性</li>
-                    <li>rootlessモードや権限について</li>
-                    <li>シェル、カーネルの関連性</li>
-                    <li>macOSのファイルシステムとパスの記法</li>
-                    <li>各種コマンドの使い方。パイプでの組み合わせ方</li>
-                    <li>nano,vimの概要</li>
-                    <li>macOSでのvimのシンボリックリンクの確認コマンド
-                        <pre><code>ls -l /usr/bin/vi</code></pre>
-                    </li>
-                    <li>vimの日本語ファイルのための設定
-                        <p>日本語の文字エンコーディングと改行コードの自動認識の設定<br>
-                            vimの設定ファイル「~/.vimrc」に下記を追記すると読み込むファイルの文字エンコーディング、改行コードを自動認識する。<br>
-                            vimrcファイルは初期状態では存在しないため作成する必要あり、下記以外にも様々な設定によって使い勝手が向上する。
-                        </p>
-                        <pre><code>
-                            set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
-                            set fileformats=unix,dos,mac
-                        </code></pre>
-                    </li>
-                    <li>vimのチュートリアルコマンド：「vimtutor」</li>
-                </ul>
-                <li>js:ドロップダウンメニューの作成</li>
+                <li>cookie（ユーザーが改変できる。ブラウザは跨げない。）</li>
+                <li>session（ユーザーは改変できない。ブラウザは跨げない。）</li>
+                <li>localStorage（ユーザーは改変できない。ブラウザは跨げない。）</li>
+                <li>DB（ユーザーは改変できない。ブラウザはまたげる。）</li>
             </ol>
-        </section>
-        <section class="day">
-                <h1>2019/8/18</h1>
-                <ol>
-                    <li>js:画像スライダーの作成[js_imgslide]ディレクトリ。課題は下記</li>
-                    <ul>
-                        <li>自動スライド化</li>
-                        <li>5の状態でNextを押されたら1へ移行（逆も必要）</li>
-                    </ul>
-                    <li>Webシステムにはデータ保存方法が4パターン存在する。</li>
-                    <ol>
-                        <li>cookie（ユーザーが改変できる。ブラウザは跨げない。）</li>
-                        <li>session（ユーザーは改変できない。ブラウザは跨げない。）</li>
-                        <li>localStorage（ユーザーは改変できない。ブラウザは跨げない。）</li>
-                        <li>DB（ユーザーは改変できない。ブラウザはまたげる。）</li>
-                    </ol>
-                    <li>javascriptでcookieを編集：cookieの概要</li>
-                    <ul>
-                        <li>データをそのままブラウザに保存しておける機能</li>
-                        <li>ブラウザごとに保存されるので、別のブラウザで同じcookieの中身は見られない。（データ共有不能）</li>
-                        <li>ブラウザに保存されているため、ユーザーが改変できる。</li>
-                        <li>そのため個人情報は保存してはいけない</li>
-                        <li>ブラウザで保存できるcookieの個数とバイト数はブラウザによって微妙に異なる</li>
-                        <li>IEでは、1ドメインにつき50個のcookieが保存でき、1個のcookieは4096バイトまで</li>
-                        <li>cookieの名前や値には[;][,]空白を含めてはいけない（encodeURIComponent()を使用して排除）</li>
-                        <li>cookieの中にはkey、valueの形式でデータが保存されている</li>
-                        <li>chromeにはcookie管理用に拡張機能EditThisCookieを追加すること</li>
-                        <li>jquery-cookie-masterを使うことでコーディングが短縮できる</li>
-                        <li>サンプルコードは「js_cookie」へ</li>
-                    </ul>
-                </ol>
-            </section>
+            <li>javascriptでcookieを編集：cookieの概要</li>
+            <ul>
+                <li>データをそのままブラウザに保存しておける機能</li>
+                <li>ブラウザごとに保存されるので、別のブラウザで同じcookieの中身は見られない。（データ共有不能）</li>
+                <li>ブラウザに保存されているため、ユーザーが改変できる。</li>
+                <li>そのため個人情報は保存してはいけない</li>
+                <li>ブラウザで保存できるcookieの個数とバイト数はブラウザによって微妙に異なる</li>
+                <li>IEでは、1ドメインにつき50個のcookieが保存でき、1個のcookieは4096バイトまで</li>
+                <li>cookieの名前や値には[;][,]空白を含めてはいけない（encodeURIComponent()を使用して排除）</li>
+                <li>cookieの中にはkey、valueの形式でデータが保存されている</li>
+                <li>chromeにはcookie管理用に拡張機能EditThisCookieを追加すること</li>
+                <li>jquery-cookie-masterを使うことでコーディングが短縮できる</li>
+                <li>サンプルコードは「js_cookie」へ</li>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/19</h1>
+        <ol>
+            <li>FujitsuサーバーPCへRHEL7.3インストール</li>
+            <li>RHEL7.3の初期設定</li>
+            <li>RHEL7.3へJDKのインストール</li>
+            <li>QNAPをフォーマットし、RAID5でストレージを作成、iSCSIターゲットを設定</li>
+            <li>RHEL7.3をiSCSIイニシエーター設定し、QNAPをiSCSIで接続し、パーティション作成、ファイルシステム作成、マウント</li>
+            <li>マウントした領域へRED5をインストール</li>
+            <li>RED5のデモで動作確認するも正常動作せず、調査にハマる</li>
+        </ol>
+    </section>
 </body>
 </html>
