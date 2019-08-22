@@ -422,7 +422,7 @@
     <section class="day">
         <h1>2019/8/21</h1>
         <ol>
-            <li>タスクランナーツールGulpの使い方を習得</li>
+            <li>タスクランナーツールGulpの使い方を習得「gulp_test」ディレクトリ</li>
             <li><a href="https://ics.media/entry/3290/">gulpの使い方最新記事</a></li>
             <li>gulp4になってgulpfile.jsの記法が少し変化している。都度公式で確認する必要あり</li>
             <li>現時点ではtask()メソッドの使用は非推奨となっており、CommonJSのmodule機能が推奨される。しかし、既存プロジェクトではtask()メソッドが使われるためtask()メソッドで検証した</li>
@@ -430,7 +430,33 @@
             <ul>
                 <li>SASSのコンパイル</li>
                 <li>画像ファイルの圧縮</li>
-                <li>CSSの圧縮</li>
+                <li>CSSの圧縮をSASSコンパイル後に追加</li>
+                <li>SASSコンパイルと画像圧縮に監視して変更があれば、それぞれの処理を実行するように設定</li>
+                <li>gulp4になってgulp-changedモジュールに変わる組み込みメソッドが追加された模様</li>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/22</h1>
+        <ol>
+            <li>RHEL7とApacheの組み合わせを検証。</li>
+            <ul>
+                <li>Apacheにプロキシとリバプロの設定を実施</li>
+                <li>httpd.confにProxyモジュールの有効化と振り分け設定を記述</li>
+                <li>Wordpressの設置ディレクトリは/var/www/html/ディレクトリを推奨</li>
+                <li>単純にアクセスURLを別サーバーへ振り分けるだけならRedirect設定でOK</li>
+                <li>常にApacheを経由して別サーバーと通信する場合はProxy設定が必要</li>
+            </ul>
+            <li>Teratermの使い方は様々な機能が存在する。(例：Win開発PCからサーバーPCへのファイル転送</li>
+            <ul>
+                <li>SSH SCP機能を使えばWin->Linuxのファイル転送やその逆も可能</li>
+                <li>Win->Linuxへのファイル転送の場合、譲渡ファイルをteratermのCUIへドラッグ＆ドロップすれば転送完了</li>
+            </ul>
+            <li>iSCSIで接続したストレージとRHELの自動マウント設定の方法</li>
+            <ul>
+                <li>fstabファイルの末行へマウントの詳細を記録、optionは「_netdev」を指定</li>
+                <li>iSCSIの場合、起動直後だとRHELがストレージを認識しないままマウントを実行するのでエラーになる</li>
+                <li>そのため上記オプションを設定してストレージを認識したらマウントするようにする設定</li>
             </ul>
         </ol>
     </section>
