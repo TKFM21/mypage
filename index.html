@@ -497,5 +497,25 @@
             </ul>
         </ol>
     </section>
+    <section class="day">
+        <h1>2019/8/26</h1>
+        <ol>
+            <li>Cisco：Catalyst 2960 L2SWの使い方を習得完了</li>
+            <ul>
+                <li>Vlanの設定と動作検証：一つのSWを論理的にNWを区切る</li>
+                <li>設定の保存：running-configとstartup-configの役割と機能</li>
+                <li>初期化：eraseコマンドでstartup-configを消去し、delete flash:vlan.datでvlan設定を削除、reloadで再起動して初期化完了</li>
+                <li>設定の復元：sh runの出力をテキストファイルなどに保存し、初期化後にそのテキストファイルの記載内容をコピペして復元</li>
+                <li>ただし、インターフェイスの有効化をテキストファイルに追記するか、復元後に有効化するかどちらかを実施する必要あり</li>
+                <li>また、RSA鍵の作成も必要。RSA鍵を作成することで完全復元が完了する</li>
+                <li>configファイルを自作して、それを流し込んで設定を実施する</li>
+            </ul>
+            <li>Cisco：Catalyst 3550 L3SWの使い方を習得開始</li>
+            <ul>
+                <li>初期設定を実施、hostname, clock, password, ip address</li>
+                <li>初期設定をwrで保存して、reload後に設定が残っていることを確認</li>
+            </ul>
+        </ol>
+    </section>
 </body>
 </html>
