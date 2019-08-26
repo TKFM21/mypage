@@ -517,5 +517,27 @@
             </ul>
         </ol>
     </section>
+    <section class="day">
+        <h1>2019/8/27</h1>
+        <ol>
+            <li>HTML/CSS:floatを解除する方法</li>
+            <ul>
+                <li>overflow: hidden</li>
+                <li>float対象直下に下記で要素を挿入
+                    <pre><code>
+                        .section::after{
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                    </code></pre>
+                </li>
+            </ul>
+            <li>CSS：animationを自作する場合、@keyframesで作成する</li>
+            <li><a href="http://easings.net/ja#">easingの参考サイト</a></li>
+            <li><a href="http://qiita.com/nekoneko-wanwan/items/e8114c6e34d2950a7b28">animation参考サイト</a></li>
+            <li><a href="http://sakichin.com/chapter01/chapter01_step04_09.html">ブラウザの仕組み詳細</a></li>
+        </ol>
+    </section>
 </body>
 </html>
