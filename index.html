@@ -258,7 +258,7 @@
                 <p>アクティベーションオブジェクトは関数の実行時に生成され、関数宣言しただけではアクセスできない</p>
             </li>
             <li>js:スコープチェーン
-                <p>jsでの変数やプロパティの参照順位の仕様（例：ローカル変数=>グローバル変数の順位）</p>
+                <p>jsでの変数やプロパティの参照順位の仕様（例：ローカル変数=&gt;グローバル変数の順位）</p>
                 <p>Callオブジェクトは関数を呼び出すたびに内部で自動生成されるオブジェクトで、関数内のローカル変数を管理している。</p>
             </li>
         </ol>
@@ -449,8 +449,8 @@
             </ul>
             <li>Teratermの使い方は様々な機能が存在する。(例：Win開発PCからサーバーPCへのファイル転送</li>
             <ul>
-                <li>SSH SCP機能を使えばWin->Linuxのファイル転送やその逆も可能</li>
-                <li>Win->Linuxへのファイル転送の場合、譲渡ファイルをteratermのCUIへドラッグ＆ドロップすれば転送完了</li>
+                <li>SSH SCP機能を使えばWin-&gt;Linuxのファイル転送やその逆も可能</li>
+                <li>Win-&gt;Linuxへのファイル転送の場合、譲渡ファイルをteratermのCUIへドラッグ＆ドロップすれば転送完了</li>
             </ul>
             <li>iSCSIで接続したストレージとRHELの自動マウント設定の方法</li>
             <ul>
@@ -466,7 +466,7 @@
             <li>Cisco Catalyst2960:L2SWの使い方を習得開始</li>
             <ul>
                 <li>Consoleポートからの設定開始。モード切り替えとコマンドヘルプの見方。初期設定の概要</li>
-                <li>初期設定の実施。コンソール接続からTelnet接続ｰ>SSH接続への切り替え</li>
+                <li>初期設定の実施。コンソール接続からTelnet接続ｰ&gt;SSH接続への切り替え</li>
                 <li>IPアドレス、ホスト名、ドメイン名、ユーザー名、パスワードの設定</li>
                 <li>機器の設定値確認、仕様確認、状態確認のコマンドを実践</li>
                 <li>int fa 0/10ポートのDuplex、Speed、shutdownの検証</li>
@@ -565,7 +565,7 @@
             </ul>
             <li>オンライン教室：jsの非同期処理promiseとasync/await</li>
             <ul>
-                <li>promiseの学習の流れ：白熱教室で概要を掴む　ｰ>　<a href="https://azu.github.io/promises-book/">ここで詳細を理解</a></li>
+                <li>promiseの学習の流れ：白熱教室で概要を掴む　ｰ&gt;　<a href="https://azu.github.io/promises-book/">ここで詳細を理解</a></li>
                 <li>promiseはクラス</li>
                 <li>promiseには3つの状態</li>
                 <ol>
@@ -578,8 +578,41 @@
                 <ol>
                     <li>thenメソッドはインスタンスでresolveが呼び出されたときに実行される</li>
                     <li>catchメソッドはエラー発生して、rejectが呼び出されたときに実行される</li>
+                    <li>エラーが起こればthenは無視、エラーがなければcatchは無視</li>
+                    <li>resolve(),reject()で（）に値を入れなかった場合、暗黙的にpromiseインスタンスが返される</li>
+                    <li>then,catchで何もreturnしなかった場合も暗黙的にpromiseインスタンスが返る</li>
+                    <li>故にチェーンでthen,catchメソッドが繋げられる</li>
+                    <li>resolve(1)としてthen(value)とするとvalueに1が代入される仕組み</li>
+                    <li>catchの場合はcatch(error)でエラーを受け取って処理する</li>
+                    <li>thenメソッドでreturnでnew Promiseして非同期処理を追加することも可能</li>
                 </ol>
-                <li></li>
+                <li>fetch(url)との組み合わせも重要</li>
+                <ol>
+                    <li>fetchの内部処理ではpromiseインスタンスが作成されていて、かつ、resolve/rejectが実行される</li>
+                    <li>fetch(url).then((response) =&gt;{responseに対する処理})</li>
+                </ol>
+                <li>async, awaitはPromiseインスタンス作成後のthenメソッドの書き方を同期処理のようにわかりやすくしてくれる</li>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/29</h1>
+        <ol>
+            <li>RED5の自動起動設定を完了。現在の主流はsystemdによる設定。red5.serviceをコピーして書き換え</li>
+            <li>拡張Pingで60kBのデータを送信するには</li>
+            <ul>
+                <li>拡張Pingのデータサイズは制限があるため、分割する必要がある</li>
+                <li>12kBを5回にして、60kBを送る</li>
+                <li>Windowsならping -l 60000 192.168.1.254で指定できるが、これは失敗する</li>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/8/30</h1>
+        <ol>
+            <li>Shellの学習：引数の取り方</li>
+            <ul>
+                <li>＄0：command name, $1:引数1, $2:引数2…, $@:すべての引数の配列、$#:引数の数</li>
             </ul>
         </ol>
     </section>
