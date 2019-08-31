@@ -616,5 +616,28 @@
             </ul>
         </ol>
     </section>
+    <section class="day">
+        <h1>2019/8/31</h1>
+        <ol>
+            <li>レスポンシブデザイン：SASS環境構築</li>
+            <ul>
+                <li>パッケージ管理ツールyarnをHomebrewでインストール:brew install yarn</li>
+                <li><a href="http://meyerweb.com/eric/tools/css/reset">reset.cssを配置</a></li>
+            </ul>
+            <li>yarnの使い方</li>
+            <ul>
+                <li>yarn initで当該ディレクトリにpackage.jsonが新規作成される</li>
+                <li>yarn add node-sassでライブラリのインストール</li>
+                <li>yarn -i でpackage.jsonに記載されたライブラリを一括インストールできる</li>
+                <li>package.jsonにscriptsを記載すれば自作コマンドが設定できる</li>
+                <li><pre><code>
+                    "scripts": {
+                        "build-css": "node-sass --include-path scss scss/style.scss css-style.css",
+                        "watch-css": "nodemon -e scss -x \"npm run build-css\""
+                    },
+                </code></pre></li>
+            </ul>
+        </ol>
+    </section>
 </body>
 </html>
