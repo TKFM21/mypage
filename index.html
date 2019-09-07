@@ -728,7 +728,37 @@
             </ul>
             <li>FLOCSS</li>
             <ul>
-                <li></li>
+                <li>ディレクトリ構成も含めた厳格なルール</li>
+                <ol>
+                    <li>Foundation</li>
+                    <ol>
+                        <li>reset.css, normalize.cssなど</li>
+                        <li>サイト全体のデフォルトスタイルを定義</li>
+                    </ol>
+                    <li>Layout</li>
+                    <ol>
+                        <li>Objectの配置を決める</li>
+                        <li>ページ単位で唯一の存在になるのでidセレクタを使う</li>
+                    </ol>
+                    <li>Object</li>
+                    <ol>
+                        <li>Component</li>
+                        <ol>
+                            <li>再利用可能なパーツ</li>
+                            <li>プレフィックスに「c-」を付ける（例: .c-btn、.c-btn_primary）</li>
+                        </ol>
+                        <li>Project</li>
+                        <ol>
+                            <li>Componentにするほどでもないパーツ</li>
+                            <li>プレフィックスに「p-」を付ける（例: .p-article、p.article__title）</li>
+                        </ol>
+                        <li>Utility</li>
+                        <ol>
+                            <li>汎用クラスで単一のスタイルを持つ</li>
+                            <li>プレフィックスに「u-」を付ける（例: .u-clearfix、.u-block）</li>
+                        </ol>
+                    </ol>
+                </ol>
             </ul>
         </ol>
     </section>
@@ -748,7 +778,14 @@
                 <li>@mixinで変数を引数で指定して流動的に使うこともできる。引数はデフォルト値の指定が可能。</li>
                 <li>そのネストで@extendを使うと、@extendで指定したセレクタへそのネストのセレクタが追加される</li>
                 <li>HTMLのclassに複数を指定する必要がなくなって、簡素化できる</li>
+                <li>string,number,listなどの関数が存在する</li>
             </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/9/7</h1>
+        <ol>
+            <li></li>
         </ol>
     </section>
 </body>
