@@ -77,9 +77,9 @@
             <li>SASSの調査</li>
             <ul>
                 <li>記法は2種類：SASS記法（Ruby風）とSCSS記法（CSS風）</li>
-                <li>=>SCSSを採用しよう。</li>
+                <li>=&lt;SCSSを採用しよう。</li>
                 <li>コンパイラは3種類：Codepen、Koala、glup-sass+Glup.js</li>
-                <li>=>glup-sass+Glup.jsを採用</li>
+                <li>=&lt;glup-sass+Glup.jsを採用</li>
                 <li><a href="https://media-massage.net/works/docs/easysass/">詳細はこれ</a></li>
             </ul>
             <li>javascriptオブジェクトとjQueryオブジェクトが存在し、扱い方に注意が必要。<a href="https://blog.webcreativepark.net/2012/12/22-135621.html">詳細</a></li>
@@ -800,6 +800,14 @@
             <li>環境構築開始</li>
             <li>SASSをGulpで変換するように設定</li>
             <li>ress.cssがSASS変換時に読み込まれるようにgulp.jsを変更</li>
+            <li>デフォルト表示の大枠HTMLを作成</li>
+            <li>ToDoタスク入力が未入力の場合、エラー表示する処理を作成（element.className）</li>
+            <li>ToDoタスクが正常に入力された場合、ToDoリストの先頭行にタスクを追加する処理を作成</li>
+            <li>JSでDOMを作成する（document.createElement('div')）</li>
+            <li>作成したDOMにclassを追加（element.classList.add('todo-item')）</li>
+            <li>作成したDOMにテキストコンテンツを追加（element.textContent = 'new Task'）</li>
+            <li>親要素の子要素の最後尾にDOMを追加（parentElement.appendChild(childElement)）</li>
+            <li>親要素の子要素の先頭にDOMを追加（parentElement.insertBefore(childElement, parentElement.firstChild）</li>
         </ol>
     </section>
 </body>
