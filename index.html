@@ -810,5 +810,20 @@
             <li>親要素の子要素の先頭にDOMを追加（parentElement.insertBefore(childElement, parentElement.firstChild）</li>
         </ol>
     </section>
+    <section class="day">
+        <h1>2019/9/9</h1>
+        <ol>
+            <li>AWSクラウドインフラ構築</li>
+            <ol>
+                <li>VPC, AZ, Subnet, Security Group, EC2, IGW, NATGW, ALB, RDS, WAF, S3, Endpointの構築</li>
+                <li>Bastionを立ち上げてWebサーバーへSSH接続して、Webサーバーの設定を実施</li>
+                <li>WebサーバーにApacheとEC-CUBEをインストール。Apacheの設定ファイルはEC-CUBE用にカスタマイズ</li>
+                <li>RDSにはMySQLを立ち上げて、EC-CUBE用のDBを構築</li>
+                <li>EC-CUBEのログと設定ファイルはS3へ定期的に自動でバックアップされるようにcronで設定</li>
+                <li>cronの設定はcrontabにて実施。S3との同期はAWS CLIの'AWS s3 sync'コマンドを使用</li>
+                <li>WAFでEC-CUBE管理URLには管理者のIPアドレスでしかアクセスできないように設定</li>
+            </ol>
+        </ol>
+    </section>
 </body>
 </html>
