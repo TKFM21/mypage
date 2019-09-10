@@ -814,7 +814,7 @@
         <h1>2019/9/9</h1>
         <ol>
             <li>AWSクラウドインフラ構築</li>
-            <ol>
+            <ul>
                 <li>VPC, AZ, Subnet, Security Group, EC2, IGW, NATGW, ALB, RDS, WAF, S3, Endpointの構築</li>
                 <li>Bastionを立ち上げてWebサーバーへSSH接続して、Webサーバーの設定を実施</li>
                 <li>WebサーバーにApacheとEC-CUBEをインストール。Apacheの設定ファイルはEC-CUBE用にカスタマイズ</li>
@@ -822,7 +822,17 @@
                 <li>EC-CUBEのログと設定ファイルはS3へ定期的に自動でバックアップされるようにcronで設定</li>
                 <li>cronの設定はcrontabにて実施。S3との同期はAWS CLIの'AWS s3 sync'コマンドを使用</li>
                 <li>WAFでEC-CUBE管理URLには管理者のIPアドレスでしかアクセスできないように設定</li>
-            </ol>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/9/10</h1>
+        <ol>
+            <li>ToDoアプリ（Javascriptのみ）の制作</li>
+            <ul>
+                <li>ToDoタスクの完了済みタスクは背景を赤にする機能を追加</li>
+                <li>新規ToDoタスクにも完了済みになったときに背景赤になるようにイベントリスナーを追加</li>
+            </ul>
         </ol>
     </section>
 </body>
