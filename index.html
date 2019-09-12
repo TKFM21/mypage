@@ -844,5 +844,46 @@
             </ol>
         </ol>
     </section>
+    <section class="day">
+        <h1>2019/9/11</h1>
+        <ol>
+            <li>AWSでEC-CUBE構築</li>
+            <ul>
+                <li>AMIで踏み台サーバーのバックアップAMIを作成</li>
+                <li>AMIでEC-CUBE入りのWebサーバーAMIを作成</li>
+                <li>AMIが正常に動作できるかテスト</li>
+                <li>AutoScalingグループを作成、起動設定でWebサーバーAMIを指定</li>
+                <li>WebSeverの負荷をyes >> /dev/null &コマンドでCPU使用率100%にして、topコマンドで監視</li>
+                <li>全体のCPU使用率を100%にしてスケールアウトされるかをテスト</li>
+                <li>CPU使用率を0%にしてスケールインされるかをテスト</li>
+                <li>希望するインスタンス数がスケールイン/アウト時に同時に変動することを発見</li>
+                <li>EC-CUBEのトップページが正常に表示されるかを確認。管理画面も表示を確認</li>
+                <li>Route53でドメインを購入</li>
+            </ul>
+            <li>GitHubに関するオンライン教室</li>
+            <ul>
+                <li>コンフリクトについてライブコーディングで解説</li>
+                <li>pull, mergeの解説</li>
+                <li>originとは、リモートリポジトリのURLのエイリアスのようなもの</li>
+                <li>その他のGitHubの便利機能について解説。Private、Project</li>
+                <li>ESLint、Prettierを使って、自動整形とスタイルチェック</li>
+            </ul>
+        </ol>
+    </section>
+    <section class="day">
+        <h1>2019/9/12</h1>
+        <ul>
+            <li>AWSでEC-CUBE構築</li>
+            <ul>
+                <li>ACM(Certificate Manager)でSSL証明書を発行（バージニアリージョン指定）</li>
+                <li>CloudFrontでディストリビューションをALB指定で作成。ログをS3へ保存、キャッシュしない</li>
+                <li>作成したCloudFrontのDNS名でEC-CUBEサイトを表示して動作を確認</li>
+                <li>CloudFrontディストリビューションを編集して、購入したドメインをCNAMEsに指定、カスタムで取得したSSL証明書を指定</li>
+                <li>Route53の取得したドメインでAレコードを作成（エイリアス:yes、エイリアスターゲット：CloudFrontディストリビューション）</li>
+                <li>HTTPSで取得したドメインにアクセスして動作を確認</li>
+                <li>EC-CUBEの構築が完了</li>
+            </ul>
+        </ul>
+    </section>
 </body>
 </html>
