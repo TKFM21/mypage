@@ -892,5 +892,25 @@
             </ul>
         </ul>
     </section>
+    <section class="day">
+        <h1>2019/9/13</h1>
+        <ul>
+            <li>AWS:LightsailでWordpressを構築</li>
+            <ol>
+                <li>サーバーにはWordpress、Apache、mySQLがインストール済み</li>
+                <li>Wordpress管理画面でのパスワードはサーバーのホームディレクトリのファイルに記載されている</li>
+                <li>publicIPが再起動時などに変わらないように静的IPを割り当て</li>
+                <li>Route53でドメインを購入</li>
+                <li>LightsailでLoadBalancerを設置。ターゲットは一旦静的IP</li>
+                <li>LightsailでDNSを作成。作成されたネームサーバー情報をRoute53のnsレコードとドメイン情報のネームサーバーへ上書き</li>
+                <li>LightsailのLoadBalancerでSSL証明書を発行。購入したドメインとWWW付きのサブドメインを指定。2つのCNAME情報をメモ</li>
+                <li>LightsailのDNSレコード作成で2つのCNAMEと値で作成。WWW付きドメインをAレコードでLoadBalancer指定で作成</li>
+                <li>一応、Route53で取得したドメインのレコードにもCNAMEを作成</li>
+                <li>証明書の検証完了まで待機</li>
+                <li>検証完了したら、LightsailのLoadBalancer設定でHTTPS通信で作成した証明書を指定</li>
+                <li>動作確認</li>
+            </ol>
+        </ul>
+    </section>
 </body>
 </html>
