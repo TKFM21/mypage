@@ -991,8 +991,20 @@
         <h1>2019/9/18</h1>
         <ul>
             <li>Wordpressに無料テーマのLuxeritasをインストールして、セキュリティ関連の設定を実施</li>
-            <li>Lightsailのみの環境だと月額2500円程度となる見込み。CDNを利用することでもっと安くできるはす</li>
+            <li>Lightsailのみの環境だと月額2500円程度となる見込み。CDNを利用することでもっと安くできるはず</li>
             <li>AWS:Lambdaを最小構成で使ってみる</li>
+            <li>backbone.jsのModelとViewの連携</li>
+        </ul>
+    </section>
+    <section class="day">
+        <h1>2019/9/19</h1>
+        <ul>
+            <li>AWSでインフラ構築</li>
+            <ol>
+                <li>CloudFront - ALB+WAF - EC2でWAFでIPアドレス制限する場合、ALBにアクセスするのはユーザーのIPアドレスではなくCloudFrontのIPアドレスとなる</li>
+                <li>CloudFrontのIPアドレスは公開されているため、そのIPアドレスをWAFで扱う必要がある</li>
+                <li>ALBのDNS名でもアクセスできてしまうため、セキュリティ的に制限を設定する必要がある</li>
+            </ol>
         </ul>
     </section>
 </body>
