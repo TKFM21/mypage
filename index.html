@@ -947,5 +947,53 @@
             </ol>
         </ul>
     </section>
+    <section class="day">
+        <h1>2019/9/17</h1>
+        <ul>
+            <li>AWS:LightsailでWordpress立ち上げ</li>
+            <ol>
+                <li>先週ラストに仕掛けたSSL証明書の検証が失敗していた。</li>
+                <li>再度、手順を調査して検証を再実行した結果、検証成功</li>
+                <li>失敗の原因はサブドメイン用に生成されたCNAMEのwwwを付け忘れていたため。</li>
+                <li>検証を再度実行し、生成されたCNAMEを正確にLightsailのDNSレコードとRoute53レコードにコピーして検証成功した。</li>
+                <li>wordpress設定ファイルのwp-config.phpなどをhttps仕様に変更</li>
+                <li>ほとんどの構成要素をLightsailで固めたhttps仕様のWPが完成</li>
+                <li>ただし、月額約2000円の費用が発生する。もっと安くするにはCloudFrontやサーバー単体での構成が存在する。</li>
+                <li>Wordpressのセキュリティーのベストプラクティスが存在するため、2段階認証などを取り入れる必要がある。</li>
+                <li>テーマはとりあえず無料のLuxeritasを取り入れてみる</li>
+            </ol>
+            <li>backbone.jsの習得開始</li>
+            <li>Modelクラスの使い方</li>
+            <ol>
+                <li>Modelはデータを永続的に保存しておく役割</li>
+                <li>Modelではデータを保存したり、保存するデータの形式が正しいかなどのバリデーションを行ったりする</li>
+                <li>Model を作成するには、 Backbone.Model.extend() を使う</li>
+                <li>extend() の引数に、メンバー定義(defaults, initialize, validate, methodなど))を渡す</li>
+                <li>戻り値はコンストラクタ関数になっていて、 new でインスタンスを生成できる</li>
+                <li>defautlsで定義した値は全インスタンスで共通のプロパティ値となる（各インスタンスのプロパティ値とすることも可能）</li>
+                <li>newした時にinitializeで定義した処理が自動実行される</li>
+                <li>isValid()でvalidateで定義した処理が実行できる</li>
+                <li>prototypeを使ってメソッドの上書きも可能</li>
+                <li>backbone.jsに標準搭載されているプロパティ値を取得するメソッドとして、get()とescape()がある</li>
+                <li>get()はプロパティ値をそのまま出力する</li>
+                <li>escape()はプロパティ値をサニタイズして出力するため安全性が高い</li>
+            </ol>
+            <li>Viewクラスの使い方</li>
+            <ol>
+                <li>ViewクラスはjQueryが必須。内外でjQueryが用いられている</li>
+                <li>既存のDOMを指定して編集したり、新規DOMを作成したりできる</li>
+                <li>Eventをひとまとまりにして記述可能</li>
+                <li>backbone.jsでunderscore.jsのテンプレートが使える</li>
+            </ol>
+        </ul>
+    </section>
+    <section class="day">
+        <h1>2019/9/18</h1>
+        <ul>
+            <li>Wordpressに無料テーマのLuxeritasをインストールして、セキュリティ関連の設定を実施</li>
+            <li>Lightsailのみの環境だと月額2500円程度となる見込み。CDNを利用することでもっと安くできるはす</li>
+            <li>AWS:Lambdaを最小構成で使ってみる</li>
+        </ul>
+    </section>
 </body>
 </html>
